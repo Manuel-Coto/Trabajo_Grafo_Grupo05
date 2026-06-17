@@ -27,3 +27,19 @@ impl Conexion {
         }
     }
 }
+
+#[derive(Debug)]
+pub struct RutaEncontrada {
+    pub ciudades: Vec<String>,
+    pub saltos: usize,
+    pub distancia_total: u32,
+}
+
+impl RutaEncontrada {
+    pub fn mostrar(&self) {
+        println!("Ruta encontrada:");
+        println!("{}", self.ciudades.join(" -> "));
+        println!("Cantidad de saltos: {}", self.saltos);
+        println!("Distancia aproximada: {} km", self.distancia_total);
+    }
+}
