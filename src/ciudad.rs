@@ -12,3 +12,18 @@ impl Ciudad {
         }
     }
 }
+
+#[derive(Clone, Debug)]
+pub struct Conexion {
+    pub destino: usize,
+    pub distancia_km: u32,
+}
+
+impl Conexion {
+    pub fn new(destino: usize, distancia_km: u32) -> Self {
+        Self {
+            destino,
+            distancia_km,
+        }
+    }
+}
